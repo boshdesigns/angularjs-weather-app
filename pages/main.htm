@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Get the Forecast</h4>
+        <form ng-submit="submit()">
+            <div class="form-group">
+                <!-- Writing custom services - include the ng-model to bind it to the service -->
+                <input type="text" ng-model="city" class="form-control" placeholder="Enter town" style="margin-bottom: 20px;" />
+                <input type="text" ng-model="days" class="form-control" placeholder="1 - 16 Days Forecast" />
+            </div>
+            <input type="submit" class="btn btn-primary" value="Get Forecast" />
+            <input type="reset" class="btn btn-info" value="Reset" />
+        </form>
+    </div>
+</div>

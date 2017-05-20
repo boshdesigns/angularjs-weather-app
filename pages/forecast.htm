@@ -1,0 +1,21 @@
+<p>
+    <a href="#/">Back to Search</a>
+</p>
+
+
+<h4>Forecast for {{ city | capitalize }}</h4>
+<hr />
+<!-- ng-class: when setting a ng class against the routeParams it gets passed a string -->
+Days: <a href="#/forecast/2" ng-class="{ 'bg-primary': activeDays === '2' }">2</a> | <a href="#/forecast/5" ng-class="{ 'bg-primary': activeDays === '5' }">5</a> | <a href="#/forecast/7" ng-class="{ 'bg-primary': activeDays === '7' }">7</a> | <a href="#/forecast/10" ng-class="{ 'bg-primary': activeDays === '10' }">10</a> | <a href="#/forecast/14" ng-class="{ 'bg-primary': activeDays === '14' }">14</a> 
+<hr />
+
+<!-- range function could be useful else where -->
+<!--<div ng-repeat="n in range(1, activeDays)">-->
+     <div ng-repeat="w in da.list | limitTo: activeDays">
+        <div class="row">
+            <div class="col-md-12">
+                <weather-report weather-day="w" convert-to-standard="convertToCelsius(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="d MMM, y"></weather-report>
+            </div>
+        </div>
+    </div>   
+<!--</div>-->

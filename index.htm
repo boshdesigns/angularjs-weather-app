@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="weatherApp">
+    <head>
+        <title>AngularJS Weather Forecast SPA</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        
+        <!-- load angular via CDN -->
+        <script src="//code.angularjs.org/1.5.6/angular.min.js"></script>
+        <script src="//code.angularjs.org/1.5.6/angular-route.min.js"></script>
+        <script src="//code.angularjs.org/1.5.6/angular-resource.min.js"></script>
+        <script src="config.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers/main.js"></script>
+        <script src="controllers/forecast.js"></script>
+        
+        <style>
+            .bg-primary {
+                padding: 5px;
+            }
+            a.bg-primary:hover {
+                color: white;
+            }
+            .form-control {
+                color: #3f709a;
+            }
+            input::-webkit-input-placeholder {
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">AngularJS Weather</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container" ng-view>
+
+		</div>
+
+    </body>
+</html>
